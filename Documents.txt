@@ -1,0 +1,26 @@
+
+Introduction:
+    -React JS:
+        - A full feature rich application ready to be deployed for production.
+        - A library for building user interfaces
+
+    Next JS:
+        -A Framework of React JS
+        -A package that uses React for building user interfaces
+        -Loaded with a lot more features that enable you to build full fledged product ready applications.
+        -There is no need to install additional packages. Next JSs provide everyting for you.
+        
+
+Installtions:
+    Next js CLI: 
+
+Course Contents:
+    01. 
+
+01.
+
+
+References:
+
+Conclusion
+
