@@ -10,17 +10,43 @@ Introduction:
         -Loaded with a lot more features that enable you to build full fledged product ready applications.
         -There is no need to install additional packages. Next JSs provide everyting for you.
         
-
-Installtions:
-    Next js CLI: 
+    Why Lean Next JS?
+        -Next JS simplifies the process of building a react application for production.
+        -File based Routing
+        -Pre-rendering feature
+        -Pre-redering, so SEO friendly
+        -API Routes.
+        -Full stack Framework
+        -Support for CSS modules
+        -Authentication: support multple athentication system
 
 Course Contents:
-    01. 
+    01. Pre-requisites
+    02. Installtions
 
-01.
+
+
+
+    02. References
+    00. Conclusion
+
+01. Pre-requisites:
+    -HTML, CSS and Javascript Fundamentals
+    -ES6 + features
+    -React Fundamentals    
+
+02. Installtions:
+    -Latest Node Version
+    -Editor like VS Code
+
+    Package Installtions:
+        Next js CLI: npx create-next-app nextjs-fundamentals
+
+
 
 
 References:
+    -https://www.youtube.com/watch?v=9P8mASSREYM&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH&ab_channel=Codevolution
 
 Conclusion
 
