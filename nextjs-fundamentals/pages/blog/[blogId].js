@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { Component } from 'react'
 
 class blogDetail extends Component {
@@ -5,7 +6,7 @@ class blogDetail extends Component {
     return (
         <>
       <div>[blogId]</div>
-      <a href="/blog">Back to list</a>
+      <Link href="/blog">Back to list</Link>
       </>
     )
   }

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { Component } from 'react'
 
 class reviewDetail extends Component {
@@ -5,7 +6,7 @@ class reviewDetail extends Component {
     return (
       <div>
           <h1>review Detail</h1>
-          <br/><a href='/product/12/review'>Review List</a>
+          <br/><Link href='/product/12/review'>Review List</Link>
       </div>
     )
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-const index = () => {
+const Doc = () => {
 
   const router = useRouter();
   const { params =[]} = router.query;
@@ -29,4 +29,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Doc

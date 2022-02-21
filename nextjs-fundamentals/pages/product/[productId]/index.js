@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Router } from 'next/router';
 import { withRouter } from "next/router"
+import Link from 'next/link';
 
 class productDetail extends Component {
 
@@ -21,9 +22,9 @@ class productDetail extends Component {
         return (
             <div>
                 <h1>Product Detail with Id {query.productId}</h1>
-                <br/><a href='/product'>Product List</a>
+                <br/><Link href='/product'>Product List</Link>
 
-                <br/><a href='/product/12/review'>Next</a>
+                <br/><Link href='/product/12/review'>Next</Link>
 
             </div>
         )

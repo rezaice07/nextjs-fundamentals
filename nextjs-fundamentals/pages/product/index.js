@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { Component } from 'react'
 
 export class index extends Component {
@@ -5,7 +6,7 @@ export class index extends Component {
     return (
       <div>
           <h1> Product List</h1>
-          <br/><a href='/product/12'>Next</a>
+          <br/><Link href='/product/12'>Next</Link>
       </div>
     )
   }
