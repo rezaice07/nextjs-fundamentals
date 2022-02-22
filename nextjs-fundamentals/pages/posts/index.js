@@ -10,7 +10,7 @@ const Posts = ({ posts }) => {
         posts.map((item, index) => {
           return (
             <Link key={index} href={`/posts/${item.id}`} passHref>
-              <h4 > {index + 1}. {item.title}</h4>
+              <h4 key={index}> {index + 1}. {item.title}</h4>
             </Link>
           )
         })
@@ -29,7 +29,7 @@ export const getStaticProps = async () => {
       return res.data;
     });
 
-  const data = resData;//.slice(0, 3);
+  const data = resData//.slice(0, 3);
   return {
     props: {
       posts: data

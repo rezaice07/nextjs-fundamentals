@@ -43,6 +43,15 @@ Course Contents:
         Next js CLI: npx create-next-app nextjs-fundamentals
 
 
+03. To Run CLI:
+    -For running on dev environment
+        CLI: npm run dev
+    -For making a build version in .next folder
+        CLI: npm run build
+
+
+
+
 
 
 References:
