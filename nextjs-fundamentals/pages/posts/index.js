@@ -1,6 +1,6 @@
-import React from 'react'
 import axios from 'axios'
 import Link from 'next/link'
+import React from 'react'
 
 const Posts = ({ posts }) => {
   return (
@@ -29,7 +29,7 @@ export const getStaticProps = async () => {
       return res.data;
     });
 
-  const data = resData//.slice(0, 3);
+  const data = resData.slice(0, 3);
   return {
     props: {
       posts: data
