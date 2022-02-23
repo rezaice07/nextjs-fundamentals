@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
 import Link from 'next/link'
+import React, { Component } from 'react'
 
 class Home extends Component {
   render() {
@@ -16,6 +16,13 @@ class Home extends Component {
         <h1>
           <Link href="/posts" replace>
             Blog Posts
+          </Link>
+        </h1>
+
+
+        <h1>
+          <Link href="/product" replace passHref>
+            Products
           </Link>
         </h1>
 
