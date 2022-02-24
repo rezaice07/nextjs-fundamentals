@@ -9,6 +9,11 @@ class Home extends Component {
 
         <br />
         <h1>
+          <Link href="/dashboard" replace>
+            Dashboard
+          </Link>
+        </h1>
+        <h1>
           <Link href="/blog" replace>
             Blog
           </Link>

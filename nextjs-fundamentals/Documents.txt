@@ -81,6 +81,134 @@ Course Contents:
                         }
                     }
 
+        SSR With Dynamic Parameters:
+            The param can be retrieved by context, Here the category parameter is achieved by destructing the context 
+
+            Example:                
+                export const getServerSideProps = async (context) => {
+                const { params,req,res,query } = context;
+                console.log(query)
+                //console.log(req);
+                console.log(req.headers.cookie);
+                res.setHeader('Set-Cookie',['name=NEXTJS_FUNDAMENTALS']);
+
+                //console.log(res);
+
+                const { category } = params;
+
+                let data = await axios.get(`http://localhost:4000/news?category=${category}`)
+                                    .then(response => {
+                                        return response.data;
+                                    })
+
+                return {
+                        props: {
+                            articles: data
+                        }
+                    }
+                }
+
+        Client-side Data Fetching:
+            In react application, if it is not necessary for SEO compatible,
+            hence, it will be the best choice to fetch data on client side instead of pre-rendering the page 
+            either SSG or SSR
+
+            To display daashboard data, here seo not needed to index
+            Example :
+                import axios from 'axios';
+                import { useEffect, useState } from 'react';
+
+                const Dashboard = () => {
+
+                    const [isLoading, setIsLoading] = useState(true);
+                    const [dashboardData, setDashboardData] = useState(null);
+
+                    useEffect(() => {
+                        fetchDashboardData();
+                    },[]) //this [] depending on component mount
+
+                    const fetchDashboardData = async () => {
+                        await axios.get('http://localhost:4000/dashboard')
+                                    .then(res => {
+                                        setDashboardData(res.data);
+                                        setIsLoading(false);
+                                    })
+
+                    }
+
+                    if(isLoading){
+                        return <h1>Loading......</h1>
+                    }
+
+                    return (
+                        <div>
+                            <h1>Dashbaord</h1>
+                            <h4>Post {dashboardData.posts}</h4>
+                            <h4>Likes {dashboardData.likes}</h4>
+                            <h4>Followers {dashboardData.followers}</h4>
+                            <h4>Following {dashboardData.following}</h4>
+                            
+                        </div>
+                    )
+                }
+
+                export default Dashboard
+
+        SWR for Client-side Data Fetching:
+            Installtion: 
+                CLI: npm i swr
+
+            Why? both are rendering on client side, changes showing after page refresh
+            on the other hand swr can happend while browser tab clicking.
+            
+            Example: 
+            import useSWR from 'swr';
+
+            const fetchDashboardData = async () => {    
+                // const resData = await axios.get('http://localhost:4000/dashboard')
+                //     .then(res => {
+                //         console.log(res.data);
+                //         return res.data
+                //     });
+
+                const resData = await fetch('http://localhost:4000/dashboard');       
+
+                const data = resData.json();
+
+                return data;
+            }
+
+            const DashboardSWR = () => {      
+
+                const { data, error } = useSWR('dashboard',  fetchDashboardData)
+
+                if (error) {
+                    return <h1>An Error Occurred</h1>
+                }
+
+                if (!data) {
+                    return <h1>Dashboard Data Not found.</h1>
+                }
+
+                return (
+                    <div>
+                        <h1>Dashbaord</h1>
+                        <h4>Post {data.posts}</h4>
+                        <h4>Likes {data.likes}</h4>
+                        <h4>Followers {data.followers}</h4>
+                        <h4>Following {data.following}</h4>
+
+                    </div>
+                )
+            }
+
+            export default DashboardSWR
+
+            
+
+
+            
+
 
 
 

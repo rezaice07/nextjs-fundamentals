@@ -32,7 +32,7 @@ componentDidMount= async()=>{
         {
           articles.map((item, index) => {
             return (
-              <Link key={index} href={`/news/${item.id}`} passHref>
+              <Link key={index} href={`/news/${item.category}`} passHref>
                 <h4> {item.id}. {item.title}</h4>
               </Link>
             )
@@ -60,6 +60,4 @@ export const getServerSideProps = async () => {
     }
 }
 
-
-//https://www.youtube.com/watch?v=UP8s2_8jxIQ&list=PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH&index=33&ab_channel=Codevolution
 
