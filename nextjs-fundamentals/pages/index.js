@@ -26,6 +26,12 @@ class Home extends Component {
           </Link>
         </h1>
 
+        <h1>
+          <Link href="/news" replace passHref>
+            News
+          </Link>
+        </h1>
+
 
       </div>
 
