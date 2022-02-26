@@ -1,0 +1,240 @@
+/********** Header **********/
+.mobile {
+    display: none !important;
+}
+
+.mobile-menu {
+    margin-top: -5px;
+}
+
+.mobile-menu .nav-link {
+    padding: 15px 37px;
+    background: #f3f3f3;
+    border-radius: 0;
+    color: black;
+}
+
+.mobile-menu #pills-menu a, .mobile-menu #pills-category a {
+    font-size: 13px;
+}
+
+.mobile-menu .nav-pills .nav-link.active {
+    background: #b5b5b5;
+    color: black;
+}
+
+@media only screen and (max-width: 959px) {
+
+    /* .carousel.slide {
+        margin-top: 65px;
+    } */
+    .desktop {
+        display: none !important;
+    }
+
+    .navbar .menu-items {
+        margin-left: -15px;
+        margin-top: 10px;
+    }
+
+    .mobile {
+        display: block !important;
+    }
+
+    .menu-items.mobile-menu {
+        width: 270px;
+    }
+
+    .menu-items.mobile-menu .tab-content {
+        padding: 0;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .mobile-sticky-bottom {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+        background: white;
+        z-index: 9;
+        display: flex;
+        box-shadow: 0 -1px 10px #ccc;
+        margin-bottom: -1px;
+    }
+
+    .mobile-sticky-bottom .mobile-chat {
+        width: 60px;
+        background: white;
+        text-align: center;
+    }
+
+    .mobile-sticky-bottom .mobile-chat .fa-comment-dots {
+        font-size: 27px;
+        padding: 8px;
+        color: #4f4f4f;
+    }
+
+    .mobile-start-shopping {
+        width: 85%;
+        background: red;
+        text-align: center;
+    }
+
+    .mobile-start-shopping button {
+        color: white;
+    }
+
+    .mobile-cart {
+        width: 90px;
+    }
+
+    #main-nav.cart-nav a.cart-button span.bag-icon {
+        width: 25px;
+        height: 29px;
+        margin-top: 7px;
+        margin-bottom: 0;
+        background: #4f4f4f;
+    }
+
+    #main-nav.cart-nav a.cart-button span.bag-count {
+        font-size: 14px;
+        top: 10px;
+        color: #4f4f4f;
+        margin-left: -3px;
+    }
+
+    #main-nav.cart-nav {
+        position: fixed;
+        top: inherit;
+        background: none;
+        color: black;
+        bottom: 0;
+        min-height: 44px;
+        align-items: center;
+        flex-direction: column;
+        right: 25px;
+    }
+
+    #main-nav a.cart-button {
+        min-height: 44px;
+    }
+}
+
+@media only screen and (max-width: 724px) {
+    .b-category {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .d-flex-mobile {
+        display: flex;
+    }
+
+    .nav-container .checkbox {
+        left: 0px;
+    }
+
+    .navbar .menu-items {
+        margin-left: -24px;
+    }
+
+    .ham-icon {
+        margin-left: -23px;
+    }
+
+    .brand-logo.mobile {
+        margin: 0px;
+    }
+
+    .brand-logo.mobile img {
+        width: 200px;
+        height: 40px;
+        margin-top: 0px;
+    }
+
+    .serch-responsive {
+        display: none;
+    }
+
+    .wishlist span {
+        display: none;
+    }
+
+    .slick-slide img {
+        width: 97%;
+    }
+
+    .shop-now-btn .btn {
+        bottom: 5px!important;
+        font-size: 12px;
+    }
+    .banner-slider .slick-next {
+        right: 0px!important;
+    }
+    .banner-slider .slick-prev:before, .banner-slider .slick-next:before {
+        font-size: 20px!important;
+    }
+    .menu-items.mobile-menu {
+        width: 270px;
+    }
+
+    .menu-items.mobile-menu .tab-content {
+        padding: 0;
+    }
+
+    .menu-items.cat_list.mobile-menu.mobile {
+        margin-top: 10px;
+    }
+
+    .new-arrival-products {
+        border-right: none;
+    }
+}
+
+@media only screen and (max-width: 601px) {
+    .search-button-desktop {
+        display: none;
+    }
+
+    .search-button-mobile {
+        border: none;
+        background: none;
+        font-size: 21px;
+        color: #fd0101;
+        margin-left: 10px;
+    }
+
+    .search .search-button-mobile .fa-search {
+        position: absolute;
+        top: 12px;
+        left: 7px;
+        font-size: 21px;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .search-button-mobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .col-mb-12 {
+        width: 85%;
+        margin: 0px auto;
+        margin-bottom: 10px;
+    }
+    /* .option-select-overlay{
+        width: 93%!important;
+        height: 68%;
+    } */
+}
+
+@media only screen and (max-width: 350px) {
+    .col-mb-12 {
+        width: 100%;
+    }
+}

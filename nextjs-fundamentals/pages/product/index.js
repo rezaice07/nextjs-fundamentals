@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Image from 'next/image'
 import Link from 'next/link'
 import React, { Component } from 'react'
 
@@ -29,7 +30,10 @@ export class index extends Component {
           produts.map((item, index) => {
             return (
               <Link key={index} href={`/product/${item.id}`} passHref>
-                <h4> {item.id}. Name: {item.title} Price: {item.unitPrice}</h4>
+                <div>
+                  <h4> {item.id}. Name: {item.title} Price: {item.unitPrice}</h4>
+                  <Image src={`/products/${item.id}.jpg`} alt={item.title} height={280} width={420} />
+                </div>
               </Link>
             )
           })
@@ -55,6 +59,6 @@ export const getStaticProps = async () => {
     props: {
       products: data
     },
-    revalidate:30 //30 sec then api will be updated
+    revalidate: 30 //30 sec then api will be updated
   }
 }

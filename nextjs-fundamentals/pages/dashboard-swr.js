@@ -1,11 +1,17 @@
 import useSWR from 'swr';
 
 const fetchDashboardData = async () => {    
-    // const resData = await axios.get('http://localhost:4000/dashboard')
-    //     .then(res => {
-    //         console.log(res.data);
-    //         return res.data
-    //     });
+    
+    /*const resData = await axios.get('http://localhost:4000/dashboard')
+        .then(res => {
+            console.log(res.data);
+            return res.data
+        });
+
+    const filteredData={
+        data:resData
+    }
+    */
 
     const resData = await fetch('http://localhost:4000/dashboard');       
 

@@ -1,10 +1,13 @@
 import Link from 'next/link'
 import React, { Component } from 'react'
+import User from '../components/user'
 
 class Home extends Component {
   render() {
     return (
       <div style={{ textAlign: "center" }}>
+
+        <User users={[{ name: 'reja', email: 'rezaice07@gmail.com' }]} />
         <h1> Welcome to Next js fundamentals</h1>
 
         <br />
@@ -34,6 +37,13 @@ class Home extends Component {
         <h1>
           <Link href="/news" replace passHref>
             News
+          </Link>
+        </h1>
+
+
+        <h1>
+          <Link href="/events" replace passHref>
+            Events
           </Link>
         </h1>
 
