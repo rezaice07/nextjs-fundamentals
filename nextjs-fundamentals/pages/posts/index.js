@@ -23,16 +23,15 @@ const Posts = ({ posts }) => {
 export default Posts
 
 
-export const getStaticProps = async () => {
-  const resData = await axios.get('https://jsonplaceholder.typicode.com/posts')
-    .then(res => {      
-      return res.data;
-    });
+export const getServerSideProps = async () => {
+  const resData = await fetch('https://jsonplaceholder.typicode.com/posts');  
+  const data = await resData.json();
 
-  const data = resData.slice(0, 3);
+  console.log(data)
+
   return {
     props: {
-      posts: data
+      posts: data//.slice(0, 3)
     }
   }
 }
