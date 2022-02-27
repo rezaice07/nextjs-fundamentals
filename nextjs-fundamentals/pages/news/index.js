@@ -48,10 +48,8 @@ export default News
 
 
 export const getServerSideProps = async () => {
-  const data = await axios.get('http://localhost:4000/news')
-    .then(res => {
-      return res.data
-    })
+  const res = await axios.get('http://localhost:4000/news');
+  const data= await res.data;    
 
     return {
       props:{

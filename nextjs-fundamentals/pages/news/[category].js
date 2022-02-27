@@ -37,10 +37,8 @@ export const getServerSideProps = async (context) => {
 
   const { category } = params;
 
-  let data = await axios.get(`http://localhost:4000/news?category=${category}`)
-                      .then(response => {
-                          return response.data;
-                      })
+  const resData = await axios.get(`http://localhost:4000/news?category=${category}`);
+  const data=await resData.data;
 
   return {
           props: {

@@ -24,10 +24,9 @@ export default Posts
 
 
 export const getServerSideProps = async () => {
-  const resData = await fetch('https://jsonplaceholder.typicode.com/posts');  
-  const data = await resData.json();
 
-  console.log(data)
+  const resData = await axios.get('https://jsonplaceholder.typicode.com/posts');  
+  const data = await resData.data;  
 
   return {
     props: {

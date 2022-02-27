@@ -56,13 +56,9 @@ export const getStaticPaths= async()=> {
 export const getStaticProps= async (context)=> {
   const { params } = context;
 
-  const data = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
-                .then((res) => {
-                  return res.data;
-                });
-  
-  // const resData = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`);                  
-  // const data=await resData.json();
+  const res = await axios.get(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
+                
+  const {data} = await res.data;
 
   if(!data.id){
     return{
