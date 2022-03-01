@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import Header from '../components/Header';
 // import '../styles/globals.css'
 import '../styles/layout.css';
+import { SessionProvider } from "next-auth/react"
 
 const AppMain = ({ Component, pageProps }) => {
 
@@ -33,16 +34,20 @@ const AppMain = ({ Component, pageProps }) => {
 
   return (
     <Fragment>
-       <Head>
-          <link rel="stylesheet" href="/assets/css/all.min.css" />
-          <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-          <link rel="stylesheet" href="/assets/css/style.css" />
-          <link rel="stylesheet" href="/assets/css/responsive.css" />
-          <link rel="stylesheet" href="/assets/css/feedback.css" />
-        </Head>
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+
+      <Head>
+        <link rel="stylesheet" href="/assets/css/all.min.css" />
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <link rel="stylesheet" href="/assets/css/responsive.css" />
+        <link rel="stylesheet" href="/assets/css/feedback.css" />
+      </Head>
+
+      <SessionProvider session={session}>
+        <Header />
+        <Component {...pageProps} />
+        <Footer />
+      </SessionProvider>
 
       <Script type="text/javascript" src="/assets/js/bootstrap.js" />
       <Script type="text/javascript" src="/assets/js/pro.min.js" />

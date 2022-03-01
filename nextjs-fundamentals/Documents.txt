@@ -291,6 +291,12 @@ Course Contents:
             -   You can add business logic withour needing to write any additional custom server code and withouit having to configure any API Routes
             
         Global Styles:
+
+
+        Authentication:
+            CLI: npm i next-auth
+
+
             
 
 
