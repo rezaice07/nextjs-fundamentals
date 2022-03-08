@@ -43,11 +43,11 @@ const AppMain = ({ Component, pageProps }) => {
         <link rel="stylesheet" href="/assets/css/feedback.css" />
       </Head>
 
-      <SessionProvider session={session}>
+      {/* <SessionProvider session={session}> */}
         <Header />
         <Component {...pageProps} />
         <Footer />
-      </SessionProvider>
+      {/* </SessionProvider> */}
 
       <Script type="text/javascript" src="/assets/js/bootstrap.js" />
       <Script type="text/javascript" src="/assets/js/pro.min.js" />

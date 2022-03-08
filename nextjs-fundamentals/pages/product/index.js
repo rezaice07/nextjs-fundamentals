@@ -1,3 +1,5 @@
+
+/*
 import axios from 'axios'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -62,3 +64,5 @@ export const getStaticProps = async () => {
     revalidate: 30 //30 sec then api will be updated
   }
 }
+
+*/

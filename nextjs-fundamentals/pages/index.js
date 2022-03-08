@@ -47,6 +47,13 @@ class Home extends Component {
           </Link>
         </h1>
 
+        <h1>
+          <Link href="/authentication/login" replace passHref>
+            Login
+          </Link>
+        </h1>
+
+
 
       </div>
 
