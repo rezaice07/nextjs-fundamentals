@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { withRouter } from 'next/router'
 import React, { Component, useState } from 'react'
 
 class Login extends Component {
@@ -49,6 +50,8 @@ class Login extends Component {
         else {
             console.log('Otp Valid')
         }
+
+        //this.props.router.push('/.')
     }
 
     render() {
@@ -68,7 +71,7 @@ class Login extends Component {
     }
 }
 
-export default Login
+export default withRouter(Login)
 
 
 export class NEXTService{
